@@ -22,9 +22,17 @@ You will learn about bike share use in Chicago, New York City, and Washington by
     average travel time
 
 3 User info
+<<<<<<< HEAD
 	counts of each user type
     counts of each gender (only available for NYC and Chicago)
     earliest, most recent, most common year of birth (only available for NYC and Chicago)
+||||||| parent of 5bb9626... Project Description Updated
+=======
+	counts of each user type
+    counts of each gender (only available for NYC and Chicago)
+    earliest, most recent, most common year of birth (only available for NYC and Chicago)
+
+>>>>>>> 5bb9626... Project Description Updated
 
 ### Files used
 chicago.csv
