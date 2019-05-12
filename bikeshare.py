@@ -7,7 +7,7 @@ CITY_DATA = {'chicago': 'chicago.csv',
              'washington': 'washington.csv'}
 
 
-def get_filters():
+def get_main_filters():
     """
    Asks user to specify a city, month, and day to analyze.
 
@@ -18,11 +18,11 @@ def get_filters():
    """
     print('Hello! Let\'s explore some US bikeshare data!')
     # Gets user input for city (chicago, new york city, washington, uses while loop for invalid
-    city = input('Would you like to see data for Chicago, New York, or Washington?: ').lower()
+    city_name = input('Would you like to see data for Chicago, New York, or Washington?: ').lower()
 
-    while city not in ['chicago', 'new york city', 'washington']:
+    while city_name not in ['chicago', 'new york city', 'washington']:
         print('Please enter a valid city')
-        city = input('Choose a city between Chicago,New York City and Washington: ').lower()
+        city_name = input('Choose a city between Chicago,New York City and Washington: ').lower()
 
     # Following code gets user input for month (all, january, february, ... , june)
     month = input(
@@ -41,7 +41,7 @@ def get_filters():
         day = input(' Please enter the 3 letter day shortform.To look at all days please enter all: ').lower()
 
     print('-' * 40)
-    return city, month, day
+    return city_name, month, day
 
 
 def load_data(city, month, day):
@@ -100,7 +100,7 @@ def time_stats(df):
     print('-' * 40)
 
 
-def station_stats(df):
+def city_station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
@@ -202,11 +202,11 @@ def data(df):
 
 def main():
     while True:
-        city, month, day = get_filters()
+        city, month, day = get_main_filters()
         df = load_data(city, month, day)
 
         time_stats(df)
-        station_stats(df)
+        city_station_stats()
         trip_duration_stats(df)
         user_stats(df)
         data(df)
