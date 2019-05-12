@@ -5,6 +5,7 @@
 Python Project
 
 ### Description
+<<<<<<< HEAD
 You will learn about bike share use in Chicago, New York City, and Washington by computing a variety of descriptive statistics like:
 1 Popular times of travel	
     most common month
@@ -24,8 +25,6 @@ You will learn about bike share use in Chicago, New York City, and Washington by
 	counts of each user type
     counts of each gender (only available for NYC and Chicago)
     earliest, most recent, most common year of birth (only available for NYC and Chicago)
-
-
 
 ### Files used
 chicago.csv
