@@ -24,7 +24,7 @@ def get_main_filters():
         print('Please enter a valid city')
         city_name = input('Choose a city between Chicago,New York City and Washington: ').lower()
 
-    # TO DO: get user input for month (all, january, february, ... , june)
+    # Following code gets user input for month (all, january, february, ... , june)
     month = input(
         'Choose a month to explore between Jan and Jun. If you want to explore all months please enter all: ').lower()
 
@@ -33,7 +33,7 @@ def get_main_filters():
         month = input(
             ' Please enter a valid month betwen jan and juen. To look at all months please enter all: ').lower()
 
-    # Gets user input for day of week (all, monday, tuesday, sunday)
+    # Following code gets user input for day of week (all, monday, tuesday, sunday)
     day = input('Which day would you like to explore ? If you want to look at all days please enter all: ').lower()
 
     while day not in ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
@@ -46,7 +46,7 @@ def get_main_filters():
 
 def load_data(city, month, day):
     # print("Dictionary selection:  ",CITY_DATA[city])
-    # loads data file into a data frame
+    # loads data file into a panda data frame
     try:
         # print('start reading the data')
         df = pd.read_csv(CITY_DATA[city])
