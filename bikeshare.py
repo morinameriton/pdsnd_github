@@ -7,7 +7,7 @@ CITY_DATA = {'chicago': 'chicago.csv',
              'washington': 'washington.csv'}
 
 
-def get_filters():
+def get_main_filters():
     """
    Asks user to specify a city, month, and day to analyze.
 
@@ -100,7 +100,7 @@ def time_stats(df):
     print('-' * 40)
 
 
-def station_stats(df):
+def city_station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
@@ -202,11 +202,11 @@ def data(df):
 
 def main():
     while True:
-        city, month, day = get_filters()
+        city, month, day = get_main_filters()
         df = load_data(city, month, day)
 
         time_stats(df)
-        station_stats(df)
+        city_station_stats()
         trip_duration_stats(df)
         user_stats(df)
         data(df)
